@@ -21,7 +21,7 @@ $(function () {
   // useful when saving the description in local storage?
   //
   $(saveBtnEl).click(function (event) {
-    $(event.target).closest(descriptionEl);
+    // $(event.target).closest(descriptionEl);
     console.log("save me");
   });
 
