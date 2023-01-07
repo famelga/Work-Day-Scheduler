@@ -5,9 +5,12 @@
 // dayjs().isSame('hours')
 // $(".lead").wrap("wait");
 // $(".container-lg").wrap("body");
-
-// var leadEl = document.getElementById("currentDay");
+// var btn = event.target
+// .val gives value to the text area
+var descriptionEl = $('.description').val
+var saveBtnEl = $('.saveBtn');
 var leadEl = $('#currentDay');
+// var userText = $('')
 
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
@@ -17,6 +20,15 @@ $(function () {
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
   //
+  $(saveBtnEl).click(function (event) {
+    $(event.target).closest(descriptionEl);
+    console.log("save me");
+  });
+
+  // $(descriptionEl).append(text.)
+  // dont assign to specific button ..parent div with id of x
+  // event.target.closest div -with id-
+  // color- second child of div hour 9
   // document.querySelector(".btn saveBtn col-2 col-md-1").addEventListener("click", function() {
 // Dom traversal children, div to ID ("this").attri("ID")
   // })
@@ -34,7 +46,7 @@ $(function () {
   // <time>
   // query isbefore same compare
   
-  var hour = document.getElementById("hour");
+  var hour = $('#hour');
   console.log("hour"); 
 
 // function timeBlock() {
