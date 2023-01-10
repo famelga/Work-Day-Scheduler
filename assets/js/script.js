@@ -44,9 +44,21 @@ $(function () {
   // <time>
   // query isbefore same compare
   // ****each loop
+
+  $(".time-block").each(function() {
+    var idHour = parseInt($(this).attr("id").split("-")[1])
+    console.log(idHour)
+    var currentHour = dayjs().hour();
+    console.log(currentHour);
+    if (idHour === currentHour) {
+      $(this).addClass("present");
+    } else if (idHour < currentHour) {
+      $(this).addClass("past");
+    } else if (idHour > currentHour) {
+      $(this).addClass("future");
+    }
+  })
   
-  var hour = $('#hour');
-  console.log("hour"); 
 
 // function timeBlock() {
 //   for (i=0; i<  )
@@ -72,10 +84,3 @@ $(function () {
 
   
 });
-
-// var countDown = setInterval(currentTime, 1000);
-//   function currentTime() {
-//     now--;
-//     $('#currentDay').text(now);
-//     currentTime();
-//   }
