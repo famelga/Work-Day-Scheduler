@@ -11,17 +11,17 @@
 
 ## Description 
 
-[Visit the Deployed Site](https://famelga.github.io/Code-Quiz/)
+[Visit the Deployed Site](https://famelga.github.io/Work-Day-Scheduler/)
 
-In efforts to guage students' progress of JavaScript fundamentals, I have created a code quiz.
+This calendar application follows the 9-5 work schedule, and allows the user to add events. The application is also color-coded based on current hour. 
 
-I started by pseudo-coding what I wanted to occur as a user navigating the quiz. From there, I listed which functions were needed, and identified variables that may be needed. I created variables in JavaScript to refernce ids and classes from the html. Since I wanted items such as the timer and questions to appear once the start button was clicked, I added styling in js to hide the start button and instructions by changing the display to "none." The timer was made visible with the display "block" feature. 
+Most of the html was completed, with the exception of 12pm-5pm. Using the same formatting as the previous time-blocks, I added code to create the missing hours. While the scheduler displays the hours in a 12-hour format, the div ids were labeled using the format of a 24-clock. I did this so that I could use less than, greater than, and equal to in the if/else conditional statements that were used to assign color to the textarea boxes. I also had to remove the "past", "present", "future" classes from the parent div tags so that it would not override JQuery.
 
-Once the "time" text was visible, I began working on the countDown function to display the timer counting down from 60. Additionally, an "if" conditional statement was included so that the timer would stop at "0" rather than continuing into the negatives.
+I used the for each function instead of a for loop because the for each iterates through every section and passes a callback function. With the time-block class, the function added either a past, present, or future class based on the relationship between the 24-clock div ids and current hour, which was pulled from dayjs. 
 
-While it was helpful to pseudo-code, applying the actual logical was still challenging. I was able to set up the quiz questions and answers into an object array; however, I was unsuccessful in having them display like the timer had. I attempted "textContent" and "append."
+Additionally, I was able to pull the current date using dayjs format, and using the text property to display the date from JavaScript to the HTML.
 
-![Code Quiz Page](./assets/images/Code%20Quiz.gif)
+![Scheduler Page](./assets/images/Work%20Day%20Scheduler.gif)
 
 ## Portfolio Example
 
@@ -44,10 +44,11 @@ timerId = setInterval(countDown, 1000);
 Visit website.
 
 
-![Quiz Homepage](./assets/images/Website%20Homepage.png)
+![Scheduler Homepage](./assets/images/Work%20Day%20Scheduler.jpeg)
 
 ## Learning Points 
 
+The script.js was written using JQuery. 
 
 By creating this application, I have learned the importance of pseudocoding. Although I experienced some struggles and did not complete the assignment, navigating the code that I completed was easier due to pseudocode. 
 
