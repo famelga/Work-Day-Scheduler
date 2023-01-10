@@ -1,7 +1,3 @@
-var descriptionEl = $('.description').val()
-var leadEl = $('#currentDay');
-
-
 $(function () {
   $('.saveBtn').on("click",function() {
     console.log($(this).siblings("textarea").val());
