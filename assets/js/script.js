@@ -43,6 +43,7 @@ $(function () {
   // else id hour < dayjs().isSame('hours') green
   // <time>
   // query isbefore same compare
+  // ****each loop
   
   var hour = $('#hour');
   console.log("hour"); 
@@ -55,7 +56,12 @@ $(function () {
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
 
-  var storage = localStorage.getItem(descriptionEl);
+  $("textarea").each(function() {
+    console.log($(this).parent().attr("id"));
+    var hour = $(this).parent().attr("id");
+    var message = localStorage.getItem(hour);
+    $(this).val(message);
+  }) 
 
   //
   // TODO: Add code to display the current date in the header of the page.
