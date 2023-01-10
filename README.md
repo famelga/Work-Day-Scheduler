@@ -48,11 +48,9 @@ Visit website.
 
 ## Learning Points 
 
-The script.js was written using JQuery. 
+This project helped me understand the importance of scopes among tags and their relationships to one another. While I have been able to identify parent, child, and sibling tags, I did not have a fully understanding of their relevance to writing code if I could simply refer the the tag, id, or class name. 
 
-By creating this application, I have learned the importance of pseudocoding. Although I experienced some struggles and did not complete the assignment, navigating the code that I completed was easier due to pseudocode. 
-
-I was also reminded of the importance of details and specificity. There were a couple of instances in which my code was not working when I would view the page in a browser. These ended up being sue to s missing character, capitalization, or wrong formatting. 
+Since I may want to target code tags, ids, and classes that have varying names in similar ways, calling on the nearest parent, child, or siblings will address them at once.
 
 ## Author Info
 
@@ -76,7 +74,7 @@ Fayven Amelga
 
 MIT License
 
-Copyright (c) 2022 Fayven Amelga
+Copyright (c) 2023 Fayven Amelga
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -102,4 +100,4 @@ SOFTWARE.
 
 ---
 
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2023 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
