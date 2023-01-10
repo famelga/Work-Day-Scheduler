@@ -7,8 +7,7 @@
 // $(".container-lg").wrap("body");
 // var btn = event.target
 // .val gives value to the text area
-var descriptionEl = $('.description').val
-var saveBtnEl = $('.saveBtn');
+var descriptionEl = $('.description').val()
 var leadEl = $('#currentDay');
 // var userText = $('')
 
@@ -20,18 +19,17 @@ $(function () {
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
   //
-  $(saveBtnEl).click(function (event) {
-    // $(event.target).closest(descriptionEl);
-    console.log("save me");
-  });
 
-  // $(descriptionEl).append(text.)
-  // dont assign to specific button ..parent div with id of x
-  // event.target.closest div -with id-
-  // color- second child of div hour 9
-  // document.querySelector(".btn saveBtn col-2 col-md-1").addEventListener("click", function() {
-// Dom traversal children, div to ID ("this").attri("ID")
-  // })
+  // local storage
+  // connect to id
+  $('.saveBtn').on("click",function() {
+    console.log($(this).siblings("textarea").val());
+    var hour = $(this).parent().attr("id");
+    var message = $(this).siblings("textarea").val();
+    localStorage.setItem(hour, message);
+    console.log("save me");
+  }) 
+
 
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
@@ -56,6 +54,9 @@ $(function () {
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
+
+  var storage = localStorage.getItem(descriptionEl);
+
   //
   // TODO: Add code to display the current date in the header of the page.
   
