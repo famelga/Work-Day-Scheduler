@@ -25,17 +25,17 @@ Additionally, I was able to pull the current date using dayjs format, and using 
 
 ## Portfolio Example
 
-Below, my setinterval function was not displaying the timer since the "i" in interval was not capitalized. JavaScript was unable to recognize it with a lowercase letter, thus my code was not communicating with each other.
+Since the scheduler displays the hours in 12-hour notation, I had also labeled the div ids in the same way. For example, 1pm was "id='hour 1'. However, this created complexity when I was trying to format the hours on the the scheduler to match the current hour. 
 
 
 ```function gatherCrit() {
-timerId = setinterval(countDown, 1000);
+<div id="hour-1" class="row time-block">
 ```
 
-Here, the function is formatted correctly with a capitalized "i"  in setInterval.
+By switching the 24-hour notation on the the id only, rather than the scheduler, I was able to write code gave the id an number type that could be compared with the current hour through dayjs. 
 
 ```
-timerId = setInterval(countDown, 1000);
+<div id="hour-13" class="row time-block">
 ```
 
 
